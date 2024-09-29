@@ -1,0 +1,6 @@
+@BECredit_HostAddress = http://localhost:5127
+
+GET {{BECredit_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
