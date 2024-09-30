@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL.DTO.Req
+namespace DAL.DTO.Req.Auth
 {
     public class ReqRegisterAdminDto
     {
@@ -20,6 +20,6 @@ namespace DAL.DTO.Req
         [Required(ErrorMessage = "Password is required")]
         [MinLength(8, ErrorMessage = "Password must be at least 8 characters")]
         [MaxLength(50, ErrorMessage = "Password can't be more than 50 characters")]
-        public string pass{ get; set; }
+        public string pass { get; set; }
     }
 }

@@ -2,7 +2,6 @@
 using DAL.DTO.Req.Loan;
 using DAL.DTO.Res;
 using DAL.DTO.Res.Borrower;
-using DAL.DTO.Res.Lender;
 using DAL.DTO.Res.Loan;
 using DAL.Repository.Interface;
 using Microsoft.AspNetCore.Authorization;

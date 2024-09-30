@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAL.DTO.Req;
+using DAL.DTO.Req.Auth;
 using DAL.DTO.Req.User;
-using DAL.DTO.Res;
+using DAL.DTO.Res.Auth;
 using DAL.DTO.Res.User;
 
 namespace DAL.Repository.Interface

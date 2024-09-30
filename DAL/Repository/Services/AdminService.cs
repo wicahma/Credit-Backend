@@ -6,7 +6,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
-using DAL.DTO.Req;
+using DAL.DTO.Req.Auth;
 using DAL.DTO.Req.User;
 using DAL.DTO.Res;
 using DAL.DTO.Res.User;
@@ -83,6 +83,8 @@ namespace DAL.Repository.Services
             try
             {
                 MstUser user = await _context.MstUsers.SingleOrDefaultAsync(e => e.Id == userId) ?? throw new Exception("User not found!");
+
+                if (user.Role == "admin") throw new Exception("Cannot delete admin!");
 
                 _context.MstUsers.Remove(user);
 

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL.DTO.Req
+namespace DAL.DTO.Req.Auth
 {
     public class ReqLoginDto
     {

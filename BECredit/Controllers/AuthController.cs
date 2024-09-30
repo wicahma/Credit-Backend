@@ -3,10 +3,10 @@ using System.Text;
 using DAL.Repository.Interface;
 using DAL.Repository.Services;
 using Microsoft.AspNetCore.Mvc;
-using DAL.DTO.Req;
 using DAL.DTO.Res.User;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
+using DAL.DTO.Req.Auth;
 
 namespace BECredit.Controllers
 {
@@ -45,8 +45,8 @@ namespace BECredit.Controllers
                 return Ok(new ResBaseDto<string>
                 {
                     Success = true,
-                    Message = "User Registered!",
-                    Data = res,
+                    Message = res,
+                    Data = null,
                 });
             }
             catch (Exception ex)

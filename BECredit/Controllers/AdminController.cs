@@ -166,7 +166,7 @@ namespace BECredit.Controllers
             }
             catch (Exception ex)
             {
-                if (ex.Message == "User not found!")
+                if (ex.Message == "User not found!" || ex.Message == "Cannot delete admin!")
                 {
                     return BadRequest(new ResBaseDto<object>
                     {
