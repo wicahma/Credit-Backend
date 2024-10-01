@@ -65,7 +65,6 @@ namespace DAL.Repository.Services
                         InterestRate = loan.InterestRate,
                         Duration = loan.Duration,
                         Status = loan.Status,
-                        CreatedAt = loan.CreatedAt,
                         UpdatedAt = loan.UpdatedAt
                     }).ToListAsync();
 
@@ -174,8 +173,6 @@ namespace DAL.Repository.Services
                 {
                     decimal balanceAmount = loan.Amount - (monthlyRepayment * (i + 1));
                     string repaidStatus = balanceAmount <= 0 ? "done" : "on repay";
-                    
-                    if (balanceAmount <= 0) loan.Status = "done";
 
                     TrnRepayment repayment = new()
                     {
